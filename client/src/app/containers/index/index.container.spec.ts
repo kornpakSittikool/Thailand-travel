@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import {
   ComponentFixture,
-  TestBed,
   fakeAsync,
+  TestBed,
   tick,
 } from '@angular/core/testing';
+
 import { IndexContainer } from './index.container';
 
 describe('IndexContainer', () => {

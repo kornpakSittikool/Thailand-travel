@@ -16,7 +16,10 @@
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:client": "npm --workspace client start"
+    "start:client": "npm run start --workspace=client",
+    "lint:client": "npm run lint --workspace=client",
+    "prepare": "husky install",
+    "husky:pre-commit": "echo 'npm run lint:client' > .husky/pre-commit && chmod +x .husky/pre-commit"
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +28,8 @@
     "@angular/cli": "^19.2.10"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
     "prettier": "^3.5.3"
   }
 }
