@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class IndexContainer implements OnInit {
   showPreloader: boolean = true;
   parts = Array(12).fill(0);
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     this.hidePreloaderAfterDelay();
