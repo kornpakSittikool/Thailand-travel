@@ -1,0 +1,34 @@
+<div *ngIf="isShow" [ngStyle]="{
+    'opacity': opacityValue,
+    'filter': 'blur(' + blurValue + 'px)',
+    'transition': 'opacity 1s ease-in-out, filter 1s ease-in-out'
+}">
+    <div class="container mx-auto p-2">
+        <div class="flex justify-end">
+            <div class="grid grid-cols-2 gap-2">
+                <img src="assets/Flag_of_Thailand.svg.png" alt="Flag_of_Thailand"
+                    class="h-4 cursor-pointer hover:opacity-80">
+                <img src="assets/Flag_of_the_United_States.svg.png" alt="Flag_of_the_United_States"
+                    class="h-4 cursor-pointer hover:opacity-80">
+            </div>
+        </div>
+    </div>
+
+    <nav class="bg-transparent px-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#">
+                <img src="assets/Amazing_Thailand_Logo.svg.png" alt="Logo" class="h-10 inline-block ">
+            </a>
+            <div class="space-x-6  text-white">
+                <a href="#" class="font-semibold px-8 hover:text-blue-500">Book a Trip</a>
+                <a href="#" class="font-semibold px-8 hover:text-blue-500">Travel Packages</a>
+                <a href="#" class="font-semibold px-8 hover:text-blue-500">Destinations</a>
+            </div>
+            <div class="items-center space-x-2 text-white">
+                <a href="#" class="font-semibold py-[6px] px-6 rounded-full hover:bg-white hover:text-black">Login</a>
+                <a href="#" class="font-semibold py-[6px] px-6 rounded-full hover:bg-white hover:text-black">Sign
+                    Up</a>
+            </div>
+        </div>
+    </nav>
+</div>
