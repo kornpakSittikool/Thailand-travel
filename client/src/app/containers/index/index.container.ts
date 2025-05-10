@@ -13,7 +13,7 @@ import { NavbarComponent } from '../../shared/components/navbar/navbar.component
 export class IndexContainer implements OnInit {
   showPreloader: boolean = true;
   parts = Array(12).fill(0);
-  isShowNavbar: boolean = false;
+  isShowNavbar: boolean = true;
   constructor() { }
 
   ngOnInit() {
@@ -23,6 +23,6 @@ export class IndexContainer implements OnInit {
   async hidePreloaderAfterDelay() {
     await new Promise(resolve => setTimeout(resolve, 3000));
     this.showPreloader = false;
-    this.isShowNavbar = true;
+    // this.isShowNavbar = true;
   }
 }

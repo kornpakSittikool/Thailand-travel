@@ -1,10 +1,11 @@
-<div *ngIf="isShow" [ngStyle]="{
+<!-- <div *ngIf="isShow" [ngStyle]="{
     'opacity': opacityValue,
     'filter': 'blur(' + blurValue + 'px)',
     'transition': 'opacity 1s ease-in-out, filter 1s ease-in-out'
-}">
+}"> -->
+<div>
     <div class="container mx-auto p-2">
-        <div class="flex justify-end">
+        <div class="flex justify-end pr-4">
             <div class="grid grid-cols-2 gap-2">
                 <img src="assets/Flag_of_Thailand.svg.png" alt="Flag_of_Thailand"
                     class="h-4 cursor-pointer hover:opacity-80">
@@ -17,17 +18,25 @@
     <nav class="bg-transparent px-4">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#">
-                <img src="assets/Amazing_Thailand_Logo.svg.png" alt="Logo" class="h-10 inline-block ">
+                <img src="assets/Amazing_Thailand_Logo.svg.png" alt="Logo" class="h-20 inline-block ">
             </a>
-            <div class="space-x-6  text-white">
-                <a href="#" class="font-semibold px-8 hover:text-blue-500">Book a Trip</a>
-                <a href="#" class="font-semibold px-8 hover:text-blue-500">Travel Packages</a>
-                <a href="#" class="font-semibold px-8 hover:text-blue-500">Destinations</a>
+            <div class="space-x-6">
+                <a href="#" class="relative group px-8 text-white">
+                    Book a Trip
+                    <span class="absolute left-0 bottom-[-15px] w-full h-[2px] bg-current scale-x-0 
+                        origin-left transition-transform duration-700 ease-in-out group-hover:scale-x-100"></span>
+                </a>
+                <a href="#" class="relative group px-8 text-white">Travel Packages
+                    <span class="absolute left-0 bottom-[-15px] w-full h-[2px] bg-current scale-x-0 
+                        origin-left transition-transform duration-700 ease-in-out group-hover:scale-x-100"></span>
+                </a>
+                <a href="#" class="relative group px-8 text-white">Destinations
+                    <span class="absolute left-0 bottom-[-15px] w-full h-[2px] bg-current scale-x-0 
+                        origin-left transition-transform duration-700 ease-in-out group-hover:scale-x-100"></span></a>
             </div>
-            <div class="items-center space-x-2 text-white">
-                <a href="#" class="font-semibold py-[6px] px-6 rounded-full hover:bg-white hover:text-black">Login</a>
-                <a href="#" class="font-semibold py-[6px] px-6 rounded-full hover:bg-white hover:text-black">Sign
-                    Up</a>
+            <div class="flex justify-end items-center space-x-2 text-white">
+                <a href="#" class="py-[6px] px-6 rounded-full hover:bg-white hover:text-black">Login</a>
+                <a href="#" class="py-[6px] px-6 rounded-full hover:bg-white hover:text-black">Sign Up</a>
             </div>
         </div>
     </nav>
