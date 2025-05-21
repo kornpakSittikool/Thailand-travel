@@ -1,0 +1,55 @@
+.navbar-container {
+    @apply container mx-auto p-2;
+}
+
+.navbar-lang-select {
+    @apply flex justify-end pr-4;
+}
+
+.navbar-flag-grid {
+    @apply grid grid-cols-2 gap-2;
+}
+
+.navbar-flag {
+    @apply h-4 cursor-pointer;
+
+    &:hover {
+        @apply opacity-80;
+    }
+}
+
+.navbar-main {
+    @apply bg-transparent px-4;
+}
+
+.navbar-wrapper {
+    @apply container mx-auto flex justify-between items-center;
+}
+
+.navbar-logo {
+    @apply h-20 inline-block;
+}
+
+.navbar-menu {
+    @apply space-x-6;
+}
+
+.navbar-menu-item {
+    @apply relative px-8 text-white;
+
+    .navbar-menu-underline {
+        @apply absolute left-0 bottom-[-15px] w-full h-[2px] bg-current scale-x-0 origin-left transition-transform duration-700 ease-in-out;
+    }
+
+    &:hover .navbar-menu-underline {
+        @apply scale-x-100;
+    }
+}
+
+.navbar-auth {
+    @apply flex justify-end items-center space-x-2 text-white;
+}
+
+.navbar-auth-btn {
+    @apply py-[6px] px-6 rounded-full hover:bg-white hover:text-black;
+}

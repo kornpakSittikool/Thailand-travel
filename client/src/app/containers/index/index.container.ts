@@ -1,12 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
-import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 
 @Component({
   selector: 'index-container',
   standalone: true,
-  imports: [CommonModule, NavbarComponent],
+  imports: [CommonModule],
   templateUrl: 'index.container.html',
   styleUrl: 'index.container.scss',
 })

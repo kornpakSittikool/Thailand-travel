@@ -1,32 +1,32 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
+
 
 @Component({
     selector: 'navbar-component',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, RouterOutlet],
     templateUrl: 'navbar.component.html',
     styleUrl: 'navbar.component.scss',
 
 })
 export class NavbarComponent implements OnInit {
+    currentTab = 'index';
+    constructor(private router: Router) {
+        this.router.events.subscribe(() => {
+            const url = this.router.url.split('?')[0];
+            this.currentTab = url === '/' ? 'index' : url.slice(1);
+        });
+    }
 
-    constructor() { }
-    @Input() isShow: boolean = false;
-    opacityValue: number = 0;
-    blurValue: number = 10;
     ngOnInit() {
-        setTimeout(() => {
-            this.isShow = true;
-            this.animateContent();
-        }, 3000);
+        // console.log('NavbarComponent initialized');
     }
 
-    animateContent() {
-
-        setTimeout(() => {
-            this.opacityValue = 1;
-            this.blurValue = 0;
-        }, 50);
+    navigateTo(path: string) {
+        this.router.navigate([`/${path}`]);
     }
+
+
 }
