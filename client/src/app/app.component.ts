@@ -19,15 +19,14 @@ export class AppComponent {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
-        const route = this.getCurrentRoute(this.router.routerState.root);
-        this.hideNavbar = route.snapshot.data['hideNavbar'] === true;
+        this.hideNavbar = this.shouldHideNavbar(this.router.routerState.root);
       });
   }
 
-  getCurrentRoute(route: ActivatedRoute): ActivatedRoute {
+  shouldHideNavbar(route: ActivatedRoute): boolean {
     while (route.firstChild) {
       route = route.firstChild;
     }
-    return route;
+    return route.snapshot.data['hideNavbar'] === true;
   }
 }
