@@ -1,0 +1,59 @@
+ /* ลำ 1 เดินตามเส้นพริ้ว */
+ @keyframes airplane-path-1 {
+     0% {
+         offset-distance: 0%;
+     }
+
+     100% {
+         offset-distance: 100%;
+     }
+ }
+
+ .animate-airplane-path-1 {
+     offset-path: path("M -10 30 Q 200 0, 400 50 T 900 100");
+     animation: airplane-path-1 18s cubic-bezier(.55, .03, .26, .99) infinite;
+     offset-rotate: auto;
+ }
+
+ @keyframes airplane-cute-2 {
+     0% {
+         top: 75%;
+         left: -20%;
+         transform: rotate(-15deg);
+     }
+
+     50% {
+         top: 55%;
+         left: 100%;
+         transform: rotate(10deg);
+     }
+
+     100% {
+         top: 75%;
+         left: -20%;
+         transform: rotate(-15deg);
+     }
+ }
+
+ .animate-airplane-cute-2 {
+     animation: airplane-cute-2 20s cubic-bezier(.55, .03, .26, .99) infinite;
+ }
+
+ @keyframes airplane-circle-cute {
+     0% {
+         transform: rotate(0deg) translateX(180px) rotate(0deg);
+         top: 50%;
+         left: 50%;
+     }
+
+     100% {
+         transform: rotate(360deg) translateX(180px) rotate(-360deg);
+         top: 50%;
+         left: 50%;
+     }
+ }
+
+ .animate-airplane-circle-cute {
+     animation: airplane-circle-cute 25s cubic-bezier(.55, .03, .26, .99) infinite;
+     transform-origin: center;
+ }

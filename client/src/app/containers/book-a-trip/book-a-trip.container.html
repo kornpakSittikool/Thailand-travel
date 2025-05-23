@@ -1,3 +1,30 @@
-<div>
-    book-a-trip
+<div class="container mx-auto p-2">
+    <div
+        class="relative w-full max-w-4xl mx-auto mt-10 p-6 bg-white/70 backdrop-blur-md border border-pink-200 rounded-2xl shadow-[0_8px_30px_rgba(255,192,203,0.4)] overflow-hidden">
+
+        <!-- เส้นทางบิน -->
+        <svg class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+            <path d="M -10 30 Q 200 0, 400 50 T 900 100" stroke="#f472b6" stroke-width="2" fill="none"
+                stroke-dasharray="10 10" />
+        </svg>
+
+        <!-- ลำ 1 บินตามเส้น -->
+        <img src="/assets/icons/icons8-airplane-24.png" class="absolute  w-8 h-8 animate-airplane-path-1 z-10"
+            style="filter: invert(44%) sepia(98%) saturate(1283%) hue-rotate(180deg) brightness(95%) contrast(92%);" />
+
+        <!-- ลำ 2 บินช้าเฉียง -->
+        <img src="/assets/icons/icons8-airplane-24.png" class="absolute w-8 h-8 animate-airplane-cute-2 z-10"
+            style="filter: invert(78%) sepia(11%) saturate(4385%) hue-rotate(300deg) brightness(97%) contrast(94%);" />
+
+
+        <!-- ลำ 3 บินวนรอบ -->
+        <img src="/assets/icons/icons8-airplane-24.png" class="absolute w-8 h-8 animate-airplane-circle-cute z-10"
+            style="filter: invert(86%) sepia(35%) saturate(746%) hue-rotate(0deg) brightness(107%) contrast(105%);" />
+
+
+        <h2 class="text-2xl font-semibold text-pink-800">Book a Trip</h2>
+        <p class="mt-2 text-gray-700">
+            Plan your unforgettable journey through Thailand with ease.
+        </p>
+    </div>
 </div>
